@@ -2,16 +2,16 @@
 
 namespace MediatorPatternExample.Objects
 {
-    public class AbilityScoreTextBox : Component
+    public class AbilityScoreTextBoxComponent : Component
     {
         private int Score { get; }
         
-        public AbilityScoreTextBox(IMediator mediator, int score) : base(mediator)
+        public AbilityScoreTextBoxComponent(IMediator mediator, int score) : base(mediator)
         {
             Score = score;
         }
 
-        public bool ValidateScore()
+        public override bool Validate()
         {
             if (Score > 20)
             {
